@@ -9,8 +9,9 @@ services:
     ports:
       - "8000:8000"
     environment:
-      - DATABASE_URL=postgresql://user:password@db:5433/ridesharing
+      - DATABASE_URL=postgresql://user:password@db:5432/ridesharing
       - SECRET_KEY=your-secret-key-here
+      - DOCKER_ENV=1
     depends_on:
       - db
 
