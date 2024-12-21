@@ -2,6 +2,10 @@ from sqlalchemy import create_engine
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
 import os
+# filepath: app/database.py
+from sqlalchemy.orm import declarative_base
+
+Base = declarative_base()
 
 # Use 'db' as hostname when running in Docker, 'localhost' for local development
 DATABASE_URL = os.getenv(

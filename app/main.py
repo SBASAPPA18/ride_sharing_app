@@ -15,6 +15,11 @@ app = FastAPI(
     version="1.0.0"
 )
 
+# Root route
+@app.get("/")
+def read_root():
+    return {"message": "Hello World"}
+
 # Authentication endpoints
 @app.post("/token", response_model=schemas.Token)
 async def login_for_access_token(

@@ -32,6 +32,8 @@ class Ride(Base):
     __tablename__ = "rides"
 
     id = Column(Integer, primary_key=True, index=True)
+    start_location = Column(String)  # Added start_location
+    end_location = Column(String)    # Added end_location
     pickup_location = Column(String)
     dropoff_location = Column(String)
     pickup_latitude = Column(Float)
